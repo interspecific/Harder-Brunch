@@ -126,7 +126,6 @@ p {
     transition: 0.4s;
     display: none; /* Hide accordion by default */
     margin: 0 auto; /* Center the accordion */
-    padding-left: 100px;
 }
 
 
@@ -139,6 +138,7 @@ p {
     display: none;
     background-color: white;
     overflow: hidden;
+    padding-left: 100px;
 }
 
 /* Responsive design */
