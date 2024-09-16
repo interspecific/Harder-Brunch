@@ -26,8 +26,16 @@ header {
 }
 
 .logo-img {
-    width: 200px;
+    width: 400px;
     height: auto;
+    justify-content: flex-start;
+    margin-left: -875px;
+    margin-bottom: 10px;
+}
+
+.center-image {
+    padding-bottom: 200px;
+
 }
 
 .nav-links ul {
@@ -36,12 +44,14 @@ header {
     padding: 0;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
+
 }
 
 .nav-links ul li {
     display: inline;
+    margin-left: 10px;
 }
 
 .nav-links ul li a {
