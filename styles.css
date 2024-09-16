@@ -1,0 +1,87 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #a8012a; /* Washed out red */
+    color: #d77432; /* Soft gold */
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #aa0c2d; /* Darker red for the header */
+    padding: 20px 80px 10px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links ul li {
+    display: inline;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #d77432; /* Soft gold */
+    font-weight: bold;
+}
+
+.nav-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social media icon styles */
+.social-logo {
+    width: 24px; /* Set a consistent size for all social icons */
+    height: auto;
+    vertical-align: middle; /* Ensures the logos align well with any text */
+}
+
+.nav-links ul li a img {
+    display: block; /* Ensures the images behave well as inline-block elements */
+}
+
+/* Main content styles */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+p {
+    font-size: 2.2rem;
+}
+
+/* Centered image styles */
+.center-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Reduce the height to move the image up */
+    margin-top: -10px; /* Adjust margin to move the container higher, if needed */
+}
+
+.center-image {
+    width: 1450px; /* Set a custom width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
