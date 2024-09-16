@@ -117,7 +117,9 @@ p {
     font-size: 1rem;
     transition: 0.4s;
     display: none; /* Hide accordion by default */
+    margin: 0 auto; /* Center the accordion */
 }
+
 
 .accordion.active, .accordion:hover {
     background-color: #d15f2a;
@@ -138,6 +140,7 @@ p {
 
     .accordion {
         display: block; /* Show accordion on small screens */
+        max-width: 300px; /* Limit the width of the accordion */
     }
 
     .logo-img {
@@ -145,8 +148,9 @@ p {
     }
 
     .center-image {
-        width: 100%;
+        width: 90%; /* Make the image more responsive */
         max-width: 100%;
+        margin: 0 auto; /* Ensure the image is centered */
     }
 
     h1 {
@@ -173,6 +177,12 @@ p {
 
     .center-image {
         width: 90%;
+        margin: 0 auto; /* Ensure the image is centered */
+    }
+
+    .accordion {
+        max-width: 300px; /* Ensure the accordion is centered and doesn't take full width */
+        margin: 0 auto;
     }
 
     h1 {
