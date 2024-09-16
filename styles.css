@@ -4,25 +4,29 @@ body {
     font-family: Arial, sans-serif;
     background-color: #a8012a; /* Washed out red */
     color: #d77432; /* Soft gold */
-    font-size: 1rem; /* Use rem for better scaling on different devices */
+    font-size: 1rem;
+    text-align: center;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #aa0c2d; /* Darker red for the header */
+    background-color: #aa0c2d;
     padding: 20px 80px 10px 30px;
-    flex-wrap: wrap; /* Allow navigation to stack on smaller screens */
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 .logo-img {
-    width: 200px; /* Adjust size as needed */
+    width: 200px;
     height: auto;
 }
 
@@ -32,7 +36,8 @@ header {
     padding: 0;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Ensure the nav items wrap properly on smaller screens */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-links ul li {
@@ -41,7 +46,7 @@ header {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #d77432; /* Soft gold */
+    color: #d77432;
     font-weight: bold;
 }
 
@@ -51,13 +56,13 @@ header {
 
 /* Social media icon styles */
 .social-logo {
-    width: 24px; /* Set a consistent size for all social icons */
+    width: 24px;
     height: auto;
-    vertical-align: middle; /* Ensures the logos align well with any text */
+    vertical-align: middle;
 }
 
 .nav-links ul li a img {
-    display: block; /* Ensures the images behave well as inline-block elements */
+    display: block;
 }
 
 /* Main content styles */
@@ -79,53 +84,77 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Remove fixed height */
-    margin-top: -10px; /* Adjust margin to move the container higher if needed */
+    height: auto;
+    margin-top: -10px;
 }
 
 .center-image {
-    width: 100%; /* Make the image responsive */
-    max-width: 900px; /* Limit the maximum width for smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+/* Accordion styles */
+.accordion {
+    background-color: #d77432;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.4s;
+    display: none; /* Hide accordion by default */
+}
+
+.accordion.active, .accordion:hover {
+    background-color: #d15f2a;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    body {
-        font-size: 0.9rem; /* Adjust font size for tablets */
-        padding: 20px;
+    .nav-links {
+        display: none; /* Hide regular navigation on small screens */
+    }
+
+    .accordion {
+        display: block; /* Show accordion on small screens */
     }
 
     .logo-img {
-        width: 150px; /* Scale down the logo for smaller screens */
-    }
-
-    .nav-links ul {
-        flex-direction: column; /* Stack navigation vertically on smaller screens */
-        gap: 10px;
+        width: 150px;
     }
 
     .center-image {
-        width: 100%; /* Make the image responsive for tablets */
-        max-width: 100%; /* Remove max-width limit on smaller screens */
+        width: 100%;
+        max-width: 100%;
     }
 
     h1 {
-        font-size: 2.5rem; /* Adjust heading size for tablets */
+        font-size: 2.5rem;
     }
 
     p {
-        font-size: 1.8rem; /* Adjust paragraph size for tablets */
+        font-size: 1.8rem;
     }
 
     .social-logo {
-        width: 22px; /* Resize social icons for tablets */
+        width: 22px;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+        font-size: 0.8rem;
     }
 
     .nav-links ul {
@@ -133,18 +162,18 @@ p {
     }
 
     .center-image {
-        width: 90%; /* Reduce image size for small screens */
+        width: 90%;
     }
 
     h1 {
-        font-size: 2rem; /* Adjust heading size for small screens */
+        font-size: 2rem;
     }
 
     p {
-        font-size: 1.6rem; /* Adjust paragraph size for small screens */
+        font-size: 1.6rem;
     }
 
     .social-logo {
-        width: 20px; /* Resize social icons for small screens */
+        width: 20px;
     }
 }

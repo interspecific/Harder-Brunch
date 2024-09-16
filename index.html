@@ -11,6 +11,8 @@
         <div class="logo">
             <img src="logo.png" alt="Your Logo" class="logo-img">
         </div>
+        
+        <!-- Regular Navigation (for larger screens) -->
         <nav class="nav-links">
             <ul>
                 <li><a href="https://www.patreon.com/harderbrunch">Podcast Episodes</a></li>
@@ -38,6 +40,38 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- Accordion for small screens -->
+        <button class="accordion">Menu</button>
+        <div class="panel">
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="https://www.patreon.com/harderbrunch">Podcast Episodes</a></li>
+                    <li><a href="#">Merch</a></li>
+                    <li><a href="#">Contact</a></li>                
+                    <li>
+                        <a href="https://www.instagram.com/harderbrunch">
+                            <img src="instagram.png" alt="Instagram" class="social-logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@harderbrunch">
+                            <img src="youtube.png" alt="YouTube" class="social-logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/harderbrunch">
+                            <img src="twitter.png" alt="Twitter" class="social-logo">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/harderbrunch">
+                            <img src="facebook.png" alt="Facebook" class="social-logo">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <main>
@@ -50,6 +84,24 @@
     </main>
 
     <script src="scripts.js"></script>
+
+    <script>
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>
