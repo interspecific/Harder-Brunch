@@ -138,7 +138,8 @@ p {
     display: none;
     background-color: white;
     overflow: hidden;
-    padding-left: 200px;
+    position: absolute
+;
 }
 
 /* Responsive design */
