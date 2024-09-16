@@ -13,6 +13,7 @@ header {
     align-items: center;
     background-color: #aa0c2d; /* Darker red for the header */
     padding: 20px 80px 10px 30px;
+    flex-wrap: wrap; /* Allow navigation to stack on smaller screens */
 }
 
 .logo {
@@ -31,6 +32,7 @@ header {
     padding: 0;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Ensure the nav items wrap properly on smaller screens */
 }
 
 .nav-links ul li {
@@ -77,13 +79,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Reduce the height to move the image up */
-    margin-top: -10px; /* Adjust margin to move the container higher, if needed */
+    height: auto; /* Remove fixed height */
+    margin-top: -10px; /* Adjust margin to move the container higher if needed */
 }
 
 .center-image {
     width: 100%; /* Make the image responsive */
-    max-width: 1450px; /* Limit the maximum width */
+    max-width: 900px; /* Limit the maximum width for smaller screens */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -99,12 +101,13 @@ p {
     }
 
     .nav-links ul {
-        flex-direction: column; /* Stack navigation vertically */
+        flex-direction: column; /* Stack navigation vertically on smaller screens */
         gap: 10px;
     }
 
     .center-image {
         width: 100%; /* Make the image responsive for tablets */
+        max-width: 100%; /* Remove max-width limit on smaller screens */
     }
 
     h1 {
