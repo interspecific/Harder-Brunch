@@ -104,6 +104,14 @@ p {
     height: auto;
 }
 
+/* Spotify Embed styles */
+.spotify-embed iframe {
+    width: 624px;
+    height: 351px;
+    border-radius: 12px;
+    margin: 0 auto; /* Center the embed */
+}
+
 /* Accordion styles */
 .accordion {
     background-color: #d77432;
@@ -164,6 +172,10 @@ p {
     .social-logo {
         width: 22px;
     }
+    .spotify-embed iframe {
+        width: 90%; /* Resize the Spotify iframe for smaller screens */
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -195,5 +207,9 @@ p {
 
     .social-logo {
         width: 20px;
+    }
+    .spotify-embed iframe {
+        width: 100%; /* Full width for small screens */
+        height: auto; /* Let the height adjust automatically */
     }
 }
