@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #a8012a; /* Washed out red */
     color: #d77432; /* Soft gold */
-    font-size: 20px;
+    font-size: 1rem; /* Use rem for better scaling on different devices */
 }
 
 header {
@@ -82,6 +82,66 @@ p {
 }
 
 .center-image {
-    width: 1450px; /* Set a custom width for the image */
+    width: 100%; /* Make the image responsive */
+    max-width: 1450px; /* Limit the maximum width */
     height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem; /* Adjust font size for tablets */
+        padding: 20px;
+    }
+
+    .logo-img {
+        width: 150px; /* Scale down the logo for smaller screens */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Stack navigation vertically */
+        gap: 10px;
+    }
+
+    .center-image {
+        width: 100%; /* Make the image responsive for tablets */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size for tablets */
+    }
+
+    p {
+        font-size: 1.8rem; /* Adjust paragraph size for tablets */
+    }
+
+    .social-logo {
+        width: 22px; /* Resize social icons for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.8rem; /* Further reduce font size for smaller screens */
+    }
+
+    .nav-links ul {
+        gap: 5px;
+    }
+
+    .center-image {
+        width: 90%; /* Reduce image size for small screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size for small screens */
+    }
+
+    p {
+        font-size: 1.6rem; /* Adjust paragraph size for small screens */
+    }
+
+    .social-logo {
+        width: 20px; /* Resize social icons for small screens */
+    }
 }
